@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.mywallet.MainActivity
 import com.example.mywallet.R
 import com.example.mywallet.databinding.FragmentFirstBinding
 import com.example.mywallet.databinding.FragmentSecondBinding
+import com.example.mywallet.ui.adapter.ItemAdapter
 
 class FirstFragment : Fragment() {
     private lateinit var binding: FragmentFirstBinding
@@ -17,5 +19,13 @@ class FirstFragment : Fragment() {
     ): View? {
         binding = FragmentFirstBinding.inflate(inflater,container,false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val mainActivity = activity as MainActivity
+        val dataset = mainActivity.dataset
+        val adapter = ItemAdapter(dataset)
+        binding.recyclerView.adapter = adapter
     }
 }

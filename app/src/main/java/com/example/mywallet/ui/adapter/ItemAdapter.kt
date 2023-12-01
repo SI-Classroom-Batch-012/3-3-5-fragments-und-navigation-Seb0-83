@@ -19,6 +19,9 @@ class ItemAdapter(
     override fun onBindViewHolder(holder: ItemAdapter.ItemViewHolder, position: Int) {
         val item = dataset[position]
 
+
+        holder.binding.noteTitleTV.setText(item.titleText)
+        holder.binding.noteTextTV.setText(item.textText)
     }
 
     override fun getItemCount(): Int {
