@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.mywallet.MainActivity
 import com.example.mywallet.R
@@ -29,8 +30,14 @@ class SecondFragment : Fragment() {
         mainActivity = activity as MainActivity
         val position = args.itemList
         val item = mainActivity.dataset[position]
+
         binding.secTitleTV.setText(item.titleText)
         binding.secTextTV.setText(item.textText)
+
+        binding.secTitleTV.setOnClickListener{
+            val navcontroller = binding.secTitleTV.findNavController()
+            navcontroller.navigate(SecondFragmentDirections.actionSecondFragmentToThirdFragment2(position))
+        }
     }
 
 }

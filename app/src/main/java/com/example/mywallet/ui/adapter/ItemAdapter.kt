@@ -34,8 +34,11 @@ class ItemAdapter(
         }
         holder.binding.navBarEditButton.setOnClickListener {
             //Edit page
-            val navController = holder.itemView.findNavController()
-            navController.navigate(FirstFragmentDirections.actionFirstFragmentToThirdFragment())
+            val navcontroller = holder.itemView.findNavController()
+            navcontroller.navigate(FirstFragmentDirections.actionFirstFragmentToThirdFragment(position))
+        }
+        holder.binding.navBarEditButton.setOnClickListener {
+
         }
     }
 

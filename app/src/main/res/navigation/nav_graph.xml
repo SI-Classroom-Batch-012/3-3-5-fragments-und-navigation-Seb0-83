@@ -31,6 +31,9 @@
         <argument
             android:name="itemList"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment2"
+            app:destination="@id/thirdFragment" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
@@ -40,5 +43,8 @@
         <action
             android:id="@+id/action_thirdFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
+        <argument
+            android:name="itemList"
+            app:argType="integer" />
     </fragment>
 </navigation>
