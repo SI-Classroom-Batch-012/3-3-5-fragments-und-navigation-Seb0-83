@@ -50,6 +50,14 @@
                     android:inputType="text"
                     android:textSize="20sp"
                     tools:text="@string/bspNoteText" />
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_gravity="center"
+                    android:text="@string/save" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>

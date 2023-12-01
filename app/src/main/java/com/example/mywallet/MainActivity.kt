@@ -15,4 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         dataset = Datasource().loadNote()
     }
+    fun addNote(newNote:Note){
+        dataset = listOf(newNote) + dataset
+    }
 }

@@ -26,19 +26,29 @@ class ItemAdapter(
 
         holder.binding.noteCV.setOnClickListener {
             val navController = holder.itemView.findNavController()
-            navController.navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(position))
+            navController.navigate(
+                FirstFragmentDirections.actionFirstFragmentToSecondFragment(position)
+            )
         }
         holder.binding.navBarCloseButton.setOnClickListener {
-
             //remove
         }
         holder.binding.navBarEditButton.setOnClickListener {
             //Edit page
             val navcontroller = holder.itemView.findNavController()
-            navcontroller.navigate(FirstFragmentDirections.actionFirstFragmentToThirdFragment(position))
+            navcontroller.navigate(
+                FirstFragmentDirections.actionFirstFragmentToThirdFragment(
+                    position
+                )
+            )
         }
         holder.binding.navBarEditButton.setOnClickListener {
-
+            val navcontroller = holder.itemView.findNavController()
+            navcontroller.navigate(
+                FirstFragmentDirections.actionFirstFragmentToThirdFragment(
+                    position
+                )
+            )
         }
     }
 
